@@ -1,0 +1,174 @@
+$statsoc-blue : #251574;
+$font-prefix: "HelveticaNeueLTPro-";
+
+body {
+    background-color: #000;
+
+    background: linear-gradient(to top, $statsoc-blue, #000) fixed;
+    background-size: 100% 150%;
+    background-attachment: fixed;
+
+    animation: bg-breathing 30s ease infinite;
+
+    margin: 0;
+
+    color: #fff;
+
+    font-family: $font-prefix + "Roman";
+}
+
+@keyframes bg-breathing {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 0% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+.main {
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 0;
+
+    width: 85%;
+    max-width: 800pt;
+}
+
+div.header {
+    border-bottom: 1pt solid #fff;
+
+    height: 40pt;
+}
+
+a.header {
+    display: inline-block;
+
+    width: 72pt;
+    height: 40pt;
+
+    line-height: 40pt;
+    text-align: center;
+
+    color: #fff;
+
+    vertical-align: top;
+    float: right;
+
+    transition: 0.2s;
+}
+
+a.header:hover, a.header:active {
+    background-color: $statsoc-blue;
+
+    text-shadow: 0 0 1pt #fff;
+
+    transition: 0.2s;
+}
+
+a {
+    color: #fff;
+
+    transition: 0.2s;
+}
+
+a:hover, a:active {
+    text-shadow: 0 0 1pt #fff;
+
+    transition: 0.2s;
+}
+
+.logo {
+    display: inline-block;
+
+    margin: 0;
+    padding: 0;
+
+    margin-right: 10pt;
+    margin-left: 10pt;
+
+    margin-top: 4pt;
+    margin-bottom: 4pt;
+
+    height: 32pt;
+
+    vertical-align: top;
+    float: left;
+}
+
+.banner {
+    margin-top: 36pt;
+
+    background-size: cover;
+    background-position: center;
+
+    width: 100%;
+    height: 240pt;
+}
+
+div.people { overflow: hidden; }
+
+div.person {
+    display: inline-block;
+
+    float: left;
+
+    width: 120pt;
+    height: 240pt;
+
+    margin-right: 20pt;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    vertical-align: top;
+}
+
+img.person {
+    display: block;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 120pt;
+
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 700px) {
+    .main { width: 100%; }
+
+    h1, h2, p, .people {
+        padding-left: 8pt;
+        padding-right: 8pt;
+    }
+
+    .banner {
+        height: 160pt;
+    }
+
+    div.header {
+        height: 80pt;
+    }
+
+    .logo {
+        padding-right: 70%;
+    }
+
+    a.header {
+        float: left;
+    
+        width: 25%;
+    }
+
+    div.person {
+        width: 45%;
+        max-width: 120pt;
+
+        margin-right: 5%;
+    }
+
+    img.person {
+        width: 100%;
+    }
+}
